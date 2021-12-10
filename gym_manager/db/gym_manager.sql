@@ -19,8 +19,8 @@ CREATE TABLE class (
     sport VARCHAR(255),
     capacity INT,
     date DATE,
-    start VARCHAR(255),
-    end VARCHAR(255)
+    start_time VARCHAR(255),
+    end_time VARCHAR(255)
 );
 
 CREATE TABLE booking (
