@@ -57,5 +57,5 @@ def select_member_of_gym_class(id):
     results = run_sql(sql, values)
     for result in results:
         member = Member(result["name"], result["membership"])
-        members.append(result)
+        members.append(member)
     return result
