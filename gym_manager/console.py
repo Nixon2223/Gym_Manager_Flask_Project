@@ -22,6 +22,9 @@ coach_repository.save(coach1)
 class1= GymClass("Yoga", "yoga", 20, coach1)
 gym_class_repository.save(class1)
 
+booking1 = Booking(class1, member1)
+booking_repository.save(booking1)
+
 for member in member_repository.select_all():
     print(member.__dict__)
 for coach in coach_repository.select_all():
@@ -30,5 +33,6 @@ for gym_class in gym_class_repository.select_all():
     print(gym_class.__dict__)
 
 print(gym_class_repository.select(class1.id).__dict__)
+print(booking_repository.select(booking1.id).__dict__)
 
 pdb.set_trace()
