@@ -6,8 +6,9 @@ h2 {
 .member_content {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
     position: relative;
-    width:800px;
+    width:830px;
     margin:100px 100px 100px 300px;
     padding:20px;
     border:1px solid #cccccc;
@@ -16,11 +17,17 @@ h2 {
 }
 
 .member {
+    height: 200px;
+    width: 125px;
     display: flex;
     flex-direction: column;
+    justify-content: start;
     align-items: center;
+    gap: 7px;
     margin: 10px;
     padding: 25px;
+    border-radius: 10px;
+    border: 1px;
     border-style: groove;
     border-color: black;
 }
@@ -31,6 +38,12 @@ h2 {
 }
 
 .create_form{
-    margin:100px 100px 0px 300px;
+    margin:75px 100px 0px 300px;
     float: left;
+}
+
+.delete {
+    color: red;
+    height: 20px;
+    width: 20px;
 }
