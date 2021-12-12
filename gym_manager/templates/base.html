@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Gym Manager</title>
+</head>
+<body>
+    <header>
+        <h1>Gym Manager</h1>
+    </header>
+        <nav>
+            <div class="wrapper">
+                <div class="sidebar">
+                    <div class="profile">
+                        <img src=alt="profile_picture">
+                        <h3>Niall</h3>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#" class="active">
+                                <span class="item">Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="item">Calendar</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="item">Classes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="item">Members</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="item">Coaches</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="item">Stats</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
