@@ -16,6 +16,18 @@ h1 {
     text-align: center;
 }
 
+.content {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    position: relative;
+    width:830px;
+    margin:100px 100px 100px 300px;
+    padding:20px;
+    border:1px solid #cccccc;
+    background:#ffffff; 
+    height: auto;
+}
 
 .wrapper .sidebar{
     background: #5680e9;
