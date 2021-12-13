@@ -29,14 +29,18 @@ def new_gym_class():
     coaches = coach_repository.select_all()
     return render_template("gym_classes/new.html", coaches=coaches)
 
-
 # CREATE
 @gym_classes_blueprint.route("/gym_classes", methods=["POST"])
 def create_gym_class():
-    name = request.form["name"]
+    title = request.form["title"]
+    sport = request.form["sport"]
     coach_id = request.form["coach_id"]
     coach = coach_repository.select(coach_id)
-    new_gym_class = GymClass(name, coach)
+    capacity = request.form["capacity"]
+    date = str(request.form["date"])
+    start_time = str(request.form["start_time"])
+    end_time = str(request.form["end_time"])
+    new_gym_class = GymClass(title, sport, capacity, coach, date, start_time, end_time)
     gym_class_repository.save(new_gym_class)
     return redirect("/gym_classes")
 
