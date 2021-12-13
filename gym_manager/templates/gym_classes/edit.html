@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Update a Class</h2>
+<div class = "content">
+<form action="/gym_classes/{{ gym_class.id }}" method="POST">
+    <form action="/gym_classes" method="POST">
+        <div>
+            <label for="tilte">Title:</label>
+            <input type="text" id="title" name="title" value = "{{ gym_class.title }} ">
+            <label for="sport">Sport:</label>
+            <input type="text" id="sport" name="sport" value = "{{ gym_class.sport }} ">
+            <label for="coach">Coach:</label>
+            <select name="coach_id" id="coach">
+            <option selected="selected">{{gym_class.coach.name}}</option>
+                {% for coach in coaches %}
+                <option value="{{ coach.id }}">
+                    {{ coach.name }}
+                </option>
+                {% endfor %}
+            </select>
+            <br>
+            <label for="capactity">Capacity:</label>
+            <input type="number" id="capacity" name="capacity" value = {{ gym_class.capacity }}>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" Value = "{{gym_class.date}}">
+            <label for="start_time">Start time:</label>
+            <input type="time" id="start_time" name="start_time" value = {{ gym_class.start_time }}>
+            <label for="date">End time:</label>
+            <input type="time" id="end_time" name="end_time" value = {{ gym_class.end_time }}>
+            <input type="Submit" value= "Create">
+        </div>
+        </form>
+</div>
+
+{% endblock %}

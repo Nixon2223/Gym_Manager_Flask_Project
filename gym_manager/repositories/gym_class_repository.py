@@ -6,8 +6,8 @@ import repositories.coach_repository as coach_repository
 
 
 def save(gym_class):
-    sql = "INSERT INTO gym_classes (title, sport, capacity, gym_class_coach_id, date, start_time, end_time) VALUES (%s, %s, %s, %s, %s, %s, %s) RETURNING id"
-    values = [gym_class.title, gym_class.sport, gym_class.capacity, gym_class.gym_class_coach_id.id, gym_class.date, gym_class.start_time, gym_class.end_time]
+    sql = "INSERT INTO gym_classes (title, sport, capacity, coach, date, start_time, end_time) VALUES (%s, %s, %s, %s, %s, %s, %s) RETURNING id"
+    values = [gym_class.title, gym_class.sport, gym_class.capacity, gym_class.coach.id, gym_class.date, gym_class.start_time, gym_class.end_time]
     results = run_sql(sql, values)
     id = results[0]['id']
     gym_class.id = id
@@ -45,8 +45,8 @@ def delete(id):
 
 
 def update(gym_class):
-    sql = "UPDATE classes SET (title, sport, capacity, gym_class_coach_id, date, start_time, end_time) = (%s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
-    values = [gym_class.title, gym_class.sport, gym_class.capacity, gym_class.gym_class_coach_id.id, gym_class.date, gym_class.start_time, gym_class.end_time]
+    sql = "UPDATE classes SET (title, sport, capacity, coach, date, start_time, end_time) = (%s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
+    values = [gym_class.title, gym_class.sport, gym_class.capacity, gym_class.coach.id, gym_class.date, gym_class.start_time, gym_class.end_time]
     run_sql(sql, values)
 
 

@@ -49,8 +49,8 @@ def create_gym_class():
 @gym_classes_blueprint.route("/gym_classes/<id>/edit")
 def edit_gym_class(id):
     gym_class = gym_class_repository.select(id)
-    coach = coach_repository.select_all()
-    return render_template('gym_classes/edit.html', gym_class=gym_class, coach=coach)
+    coaches = coach_repository.select_all()
+    return render_template('gym_classes/edit.html', gym_class=gym_class, coaches=coaches)
 
 
 # UPDATE
