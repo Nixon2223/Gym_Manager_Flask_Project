@@ -71,3 +71,7 @@ body {font-family: Verdana, sans-serif;}
     font-size:12px;
     color: #777;
 }
+
+.days li:hover {
+    background-color: yellow;
+  }

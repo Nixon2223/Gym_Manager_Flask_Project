@@ -8,7 +8,11 @@ calendar_blueprint = Blueprint("calendar", __name__)
 # INDEX
 @calendar_blueprint.route("/calendar")
 def calendar():
-    return render_template("calendar/index.html")
+    all_gym_classes = gym_class_repository.select_all()
+    list_of_days = []
+    for gym_class in all_gym_classes:
+        list_of_days.append(str(gym_class.date)[8:])
+    return render_template("calendar/index.html", list_of_days = list_of_days)
 
 #VIEW DAY
 @calendar_blueprint.route("/calendar/<day>")
