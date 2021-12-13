@@ -3,16 +3,24 @@
 
 <h2>Classes</h2>
 
-<div class= "create_form">
-    <form action="/coaches" method="POST">
+<div class= "classes_form">
+    <form action="/classes" method="POST">
     <div>
         <label for="tilte">Title:</label>
         <input type="text" id="title" name="title">
         <label for="sport">Sport:</label>
         <input type="text" id="sport" name="sport">
+        <label for="coach">Coach:</label>
+        <select name="gym_class_coach_id" id="coach">
+            {% for coach in coaches %}
+            <option value="{{ coach.id }}">
+                {{ coach.name }}
+            </option>
+            {% endfor %}
+        </select>
+        <br>
         <label for="capactity">Capacity:</label>
         <input type="number" id="capacity" name="capacity">
-        <br>
         <label for="date">Date:</label>
         <input type="date" id="date" name="date">
         <label for="start_time">Start time:</label>
@@ -28,8 +36,9 @@
 {% for gym_class in gym_classes %}
 
 <section class = "gym_class">
-    <img class = "class_img" src = "static/img/PinClipart.com_playing-video-games-black_1486972.png">
+    <img class = "class_img" src = "static/img/Screenshot 2021-12-13 at 10.52.38.png">
     <p>{{ gym_class.title }}</p>
+    <p>{{ gym_class.gym_class_coach_id.name }}</p>
     <p>{{ gym_class.date }}</p>
     <p>{{ gym_class.start_time }} - {{ gym_class.end_time }}</p>
     <a href="/gym_classes/{{ gym_class.id }}/edit">Edit</a>

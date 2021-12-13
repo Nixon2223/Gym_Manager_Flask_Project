@@ -36,7 +36,7 @@ h2 {
         height: auto;
 }
 
-.create_form{
+.classes_form{
     margin:75px 100px 0px 300px;
     float: left;
 }
@@ -46,3 +46,6 @@ h2 {
     height: 20px;
     width: 20px;
 }
+
+#capacity {width: 50px;}
+#coach {width:50px;}
