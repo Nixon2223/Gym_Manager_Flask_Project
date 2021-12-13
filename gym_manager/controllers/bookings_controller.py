@@ -23,15 +23,14 @@ def new_booking():
 
 
 # CREATE
-@bookings_blueprint.route("/bookings", methods=["POST"])
-def create_booking():
+@bookings_blueprint.route("/bookings/<gym_class_id>", methods=["POST"])
+def create_booking(gym_class_id):
     member_id = request.form["member_id"]
-    gym_class_id = request.form["gym_class_id"]
     member = member_repository.select(member_id)
     gym_class = gym_class_repository.select(gym_class_id)
     new_booking = Booking(member, gym_class)
     booking_repository.save(new_booking)
-    return redirect("/bookings")
+    return redirect(request.referrer)
 
 
 # EDIT

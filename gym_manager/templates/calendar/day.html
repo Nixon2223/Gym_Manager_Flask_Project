@@ -13,14 +13,15 @@
     <p>{{ gym_class.coach.name }}</p>
     <p>{{ gym_class.date }}</p>
     <p>{{ gym_class.start_time }} - {{ gym_class.end_time }}</p>
-    <form action="/booking/{{ gym_class.id }}" method="POST">
-    <form action="/booking" method="POST">
+    <form action="/bookings/{{ gym_class.id }}" method="POST">
+    <form action="/bookings" method="POST">
     <select name="member_id" id="member">
             {% for member in members %}
             <option value="{{ member.id }}">{{ member.name }}</option>
     </form>
             {% endfor %}
-        </select>
+    <input type="Submit" value= "Book">
+    </select>
 </section>
 {% endfor %}
 
