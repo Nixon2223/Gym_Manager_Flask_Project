@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Update a coach</h2>
+<div class = "content">
+<form action="/coaches/{{ coach.id }}" method="POST">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{ coach.name }}">
+        <input type="submit">
+    </div>
+</form>
+</div>
+
+{% endblock %}
