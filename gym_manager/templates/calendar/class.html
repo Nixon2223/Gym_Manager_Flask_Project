@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>**********</h2>
+
+<div class = "content">
+
+<section class = "gym_class">
+    <img class = "class_img" src = "static/img/Screenshot 2021-12-13 at 10.52.38.png">
+    <p>{{ gym_class.title }}</p>
+    <p>{{ gym_class.coach.name }}</p>
+    <p>{{ gym_class.date }}</p>
+    <p>{{ gym_class.start_time }} - {{ gym_class.end_time }}</p>
+    <form action="/bookings/{{ gym_class.id }}" method="POST">
+        <form action="/bookings" method="POST">
+        <select name="member_id" id="member">
+                {% for member in members %}
+                {% if member.id not in booked_in %}
+                <option value="{{ member.id }}">{{ member.name }}</option>
+        </form>
+                {% endif %}
+                {% endfor %}
+        <input type="Submit" value= "Book">
+        </select>
+</section>
+
+</div>
+{% endblock %}

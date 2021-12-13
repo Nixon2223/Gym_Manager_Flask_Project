@@ -13,17 +13,8 @@
     <p>{{ gym_class.coach.name }}</p>
     <p>{{ gym_class.date }}</p>
     <p>{{ gym_class.start_time }} - {{ gym_class.end_time }}</p>
-    <form action="/bookings/{{ gym_class.id }}" method="POST">
-    <form action="/bookings" method="POST">
-    <select name="member_id" id="member">
-            {% for member in members %}
-            {% if member.id not in booked_in %}
-            <option value="{{ member.id }}">{{ member.name }}</option>
-    </form>
-            {% endif %}
-            {% endfor %}
-    <input type="Submit" value= "Book">
-    </select>
+    <a href="/calendar/class/{{ gym_class.id }}" class="active"><span class="item">View</span>
+
 </section>
 {% endfor %}
 
