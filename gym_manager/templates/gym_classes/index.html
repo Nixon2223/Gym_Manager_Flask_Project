@@ -25,11 +25,13 @@
 </div>
 <div class = "content">
 
-{% for class in gym_classes %}
+{% for gym_class in gym_classes %}
 
 <section class = "gym_class">
     <img class = "class_img" src = "static/img/PinClipart.com_playing-video-games-black_1486972.png">
     <p>{{ gym_class.title }}</p>
+    <p>{{ gym_class.date }}</p>
+    <p>{{ gym_class.start_time }} - {{ gym_class.end_time }}</p>
     <a href="/gym_classes/{{ gym_class.id }}/edit">Edit</a>
     <form action="/gym_classes/{{ gym_class.id }}/delete" method="POST">
         <input class = "delete" type="submit" value="X">

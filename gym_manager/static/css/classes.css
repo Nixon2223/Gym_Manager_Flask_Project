@@ -15,9 +15,9 @@ h2 {
     height: auto;
 }
 
-.coach {
-    height: 200px;
-    width: 125px;
+.gym_class {
+    height: 250px;
+    width: 250px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -31,7 +31,7 @@ h2 {
     border-color: black;
 }
 
-.coach_avatar{
+.class_img{
         width:50px;
         height: auto;
 }
