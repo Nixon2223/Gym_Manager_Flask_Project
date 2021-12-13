@@ -1,4 +1,5 @@
 from flask import Blueprint, Flask, redirect, render_template, request
+from controllers.members_controller import members
 
 from models.gymclass import GymClass
 import repositories.gym_class_repository as gym_class_repository
@@ -16,9 +17,9 @@ def gym_classes():
 # SHOW
 @gym_classes_blueprint.route("/gym_classes/<id>")
 def show_gym_class(id):
-    victims = gym_class_repository.select_victims_of_gym_class(id)
+    members = gym_class_repository.select_victims_of_gym_class(id)
     gym_class = gym_class_repository.select(id)
-    return render_template("gym_classes/show.html", victims=victims, gym_class=gym_class)
+    return render_template("gym_classes/show.html", members=members, gym_class=gym_class)
 
 
 # NEW
