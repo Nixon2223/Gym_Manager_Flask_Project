@@ -17,8 +17,10 @@
     <form action="/bookings" method="POST">
     <select name="member_id" id="member">
             {% for member in members %}
+            {% if member not in booked %}
             <option value="{{ member.id }}">{{ member.name }}</option>
     </form>
+            {% endif %}
             {% endfor %}
     <input type="Submit" value= "Book">
     </select>

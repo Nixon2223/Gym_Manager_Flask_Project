@@ -52,10 +52,10 @@ def update(gym_class):
 
 def select_member_of_gym_class(id):
     members = []
-    sql = "SELECT members.* FROM humans INNER JOIN bookings ON bookings.member_id = member.id WHERE booking.gym_class_id = %s"
+    sql = "SELECT members.* FROM members INNER JOIN bookings ON bookings.member_id = member.id WHERE booking.gym_class_id = %s"
     values = [id]
     results = run_sql(sql, values)
     for result in results:
         member = Member(result["name"], result["membership"])
         members.append(member)
-    return result
+    return members
