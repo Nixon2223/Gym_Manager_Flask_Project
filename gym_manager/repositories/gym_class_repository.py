@@ -6,7 +6,7 @@ import repositories.coach_repository as coach_repository
 
 
 def save(gym_class):
-    sql = "INSERT INTO gym_classes (title, sport, capacity, coach, date, start_time, end_time) VALUES (%s, %s, %s, %s, %s, %s, %s) RETURNING id"
+    sql = "INSERT INTO gym_classes (title, sport, capacity, gym_class_coach_id, date, start_time, end_time) VALUES (%s, %s, %s, %s, %s, %s, %s) RETURNING id"
     values = [gym_class.title, gym_class.sport, gym_class.capacity, gym_class.coach.id, gym_class.date, gym_class.start_time, gym_class.end_time]
     results = run_sql(sql, values)
     id = results[0]['id']
@@ -50,12 +50,12 @@ def update(gym_class):
     run_sql(sql, values)
 
 
-def select_member_of_gym_class(id):
+def select_members_of_gym_class(id):
     members = []
-    sql = "SELECT members.* FROM members INNER JOIN bookings ON bookings.member_id = member.id WHERE booking.gym_class_id = %s"
+    sql = "SELECT members.* FROM members INNER JOIN bookings ON bookings.member_id = members.id WHERE bookings.gym_class_id = %s"
     values = [id]
     results = run_sql(sql, values)
     for result in results:
-        member = Member(result["name"], result["membership"])
+        member = Member(result["name"], result["membership"], result["id"])
         members.append(member)
     return members

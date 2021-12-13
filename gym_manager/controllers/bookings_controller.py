@@ -36,11 +36,10 @@ def create_booking(gym_class_id):
 # EDIT
 @bookings_blueprint.route("/bookings/<id>/edit")
 def edit_booking(id):
-    booked_in = gym_class_repository.select_member_of_gym_class(id)
     booking = booking_repository.select(id)
     members = member_repository.select_all()
     gym_classes = gym_class_repository.select_all()
-    return render_template('bookings/edit.html', booking=booking, members=members, gym_classes=gym_classes, booked_in = booked_in)
+    return render_template('bookings/edit.html', booking=booking, members=members, gym_classes=gym_classes)
 
 
 # UPDATE

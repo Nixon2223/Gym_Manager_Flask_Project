@@ -17,7 +17,7 @@
     <form action="/bookings" method="POST">
     <select name="member_id" id="member">
             {% for member in members %}
-            {% if member not in booked %}
+            {% if member.id not in booked_in %}
             <option value="{{ member.id }}">{{ member.name }}</option>
     </form>
             {% endif %}
