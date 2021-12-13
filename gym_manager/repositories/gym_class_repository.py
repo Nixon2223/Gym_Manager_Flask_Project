@@ -59,5 +59,3 @@ def select_member_of_gym_class(id):
         member = Member(result["name"], result["membership"])
         members.append(member)
     return result
-
-def 
