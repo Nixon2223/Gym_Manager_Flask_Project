@@ -10,3 +10,4 @@ class GymClass:
         self.start_time = start_time
         self.end_time = end_time
 
+

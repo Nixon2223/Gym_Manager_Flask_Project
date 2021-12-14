@@ -11,6 +11,8 @@
     <p>{{ gym_class.coach.name }}</p>
     <p>{{ gym_class.date }}</p>
     <p>{{ gym_class.start_time }} - {{ gym_class.end_time }}</p>
+    <p>capacity: {{num_booked_in}} /{{gym_class.capacity}}</p>
+    {% if gym_class.capacity > num_booked_in %}  
     <form action="/bookings/{{ gym_class.id }}" method="POST">
         <form action="/bookings" method="POST">
         <select name="member_id" id="member">
@@ -24,6 +26,10 @@
                 <input type="Submit" value= "Book">
         </form>
         </select>
+    {% endif %}
+    {% if gym_class.capacity <= num_booked_in %} 
+    <p>CLASS FULL</p>
+    {% endif %}
     {% for member in booked_in_members %}
     <stretch><li><img src="/static/img/PinClipart.com_playing-video-games-black_1486972.png" class = "small_member_pic">{{member.name}}    
     <form action="/bookings/{{ member.id }}/{{ gym_class.id }}/delete" method="POST">
