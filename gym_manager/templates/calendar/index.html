@@ -24,41 +24,45 @@
   </ul>
   
   <ul class="days">
-  <li>.</li>
-  <li>.</li>
-  <a href="calendar/01"><li>1</li></a>
-  <a href="calendar/02"><li>2</li></a>
-  <a href="calendar/03"><li>3</li></a>
-  <a href="calendar/04"><li>4</li></a>
-  <a href="calendar/05"><li>5</li></a>
-  <a href="calendar/06"><li>6</li></a>
-  <a href="calendar/07"><li>7</li></a>
-  <a href="calendar/08"><li>8</li></a>
-  <a href="calendar/09"><li>9</li></a>
-  <a href="calendar/10"><li>10</li></a>
-  <a href="calendar/11"><li>11</li></a>
-  <a href="calendar/12"><li>12</li></a>
-  <a href="calendar/13"><li>13</li></a>
-  <a href="calendar/14"><li>14</li></a>
-  <a href="calendar/15"><li>15</li></a>
-  <a href="calendar/16"><li>16</li></a>
-  <a href="calendar/17"><li>17</li></a>
-  <a href="calendar/18"><li>18</li></a>
-  <a href="calendar/19"><li>19</li></a>
-  <a href="calendar/20"><li>20</li></a>
-  <a href="calendar/21"><li>21</li></a>
-  <a href="calendar/22"><li>22</li></a>
-  <a href="calendar/23"><li>23</li></a>
-  <a href="calendar/24"><li>24</li></a>
-  <a href="calendar/25"><li>25</li></a>
-  <a href="calendar/26"><li>26</li></a>
-  <a href="calendar/27"><li>27</li></a>
-  <a href="calendar/28"><li>28</li></a>
-  <a href="calendar/29"><li>29</li></a>
-  <a href="calendar/30"><li>30</li></a>
-  <a href="calendar/31"><li>31</li></a>
-  <li>.</li>
-  <li>.</li>
+  
+  <!-- {% for n in range(35) %}
+  <a href="calendar/01"><li>{{n}}<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("{{n}}") != 0 %} {{list_of_days.count("{{n}}")}} {% endif %}</div></li></a>
+  {% endfor %} -->
+  <li>&#160<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("") != 0 %} {{list_of_days.count("")}} {% endif %}</div></li></a>
+  <li>&#160<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("") != 0 %} {{list_of_days.count("")}} {% endif %}</div></li></a>
+  <a href="calendar/01"><li>1<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("1") != 0 %} {{list_of_days.count("1")}} {% endif %}</div></li></a>
+  <a href="calendar/02"><li>2<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("2") != 0 %} {{list_of_days.count("2")}} {% endif %}</div></li></a>
+  <a href="calendar/03"><li>3<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("3") != 0 %} {{list_of_days.count("3")}} {% endif %}</div></li></a>
+  <a href="calendar/04"><li>4<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("4") != 0 %} {{list_of_days.count("4")}} {% endif %}</div></li></a>
+  <a href="calendar/05"><li>5<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("5") != 0 %} {{list_of_days.count("5")}} {% endif %}</div></li></a>
+  <a href="calendar/06"><li>6<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("6") != 0 %} {{list_of_days.count("6")}} {% endif %}</div></li></a>
+  <a href="calendar/07"><li>7<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("7") != 0 %} {{list_of_days.count("7")}} {% endif %}</div></li></a>
+  <a href="calendar/08"><li>8<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("8") != 0 %} {{list_of_days.count("8")}} {% endif %}</div></li></a>
+  <a href="calendar/09"><li>9<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("9") != 0 %} {{list_of_days.count("9")}} {% endif %}</div></li></a>
+  <a href="calendar/10"><li>10<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("10") != 0 %} {{list_of_days.count("10")}} {% endif %}</div></li></a>
+  <a href="calendar/11"><li>11<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("11") != 0 %} {{list_of_days.count("11")}} {% endif %}</div></li></a>
+  <a href="calendar/12"><li>12<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("12") != 0 %} {{list_of_days.count("12")}} {% endif %}</div></li></a>
+  <a href="calendar/13"><li>13<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("13") != 0 %} {{list_of_days.count("13")}} {% endif %}</div></li></a>
+  <a href="calendar/14"><li>14<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("14") != 0 %} {{list_of_days.count("14")}} {% endif %}</div></li></a>
+  <a href="calendar/15"><li>15<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("15") != 0 %} {{list_of_days.count("15")}} {% endif %}</div></li></a>
+  <a href="calendar/16"><li>16<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("16") != 0 %} {{list_of_days.count("16")}} {% endif %}</div></li></a>
+  <a href="calendar/17"><li>17<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("17") != 0 %} {{list_of_days.count("17")}} {% endif %}</div></li></a>
+  <a href="calendar/18"><li>18<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("18") != 0 %} {{list_of_days.count("18")}} {% endif %}</div></li></a>
+  <a href="calendar/19"><li>19<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("19") != 0 %} {{list_of_days.count("19")}} {% endif %}</div></li></a>
+  <a href="calendar/20"><li>20<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("20") != 0 %} {{list_of_days.count("20")}} {% endif %}</div></li></a>
+  <a href="calendar/21"><li>21<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("21") != 0 %} {{list_of_days.count("21")}} {% endif %}</div></li></a>
+  <a href="calendar/22"><li>22<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("22") != 0 %} {{list_of_days.count("22")}} {% endif %}</div></li></a>
+  <a href="calendar/23"><li>23<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("23") != 0 %} {{list_of_days.count("23")}} {% endif %}</div></li></a>
+  <a href="calendar/24"><li>24<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("24") != 0 %} {{list_of_days.count("24")}} {% endif %}</div></li></a>
+  <a href="calendar/25"><li>25<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("25") != 0 %} {{list_of_days.count("25")}} {% endif %}</div></li></a>
+  <a href="calendar/26"><li>26<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("26") != 0 %} {{list_of_days.count("26")}} {% endif %}</div></li></a>
+  <a href="calendar/27"><li>27<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("27") != 0 %} {{list_of_days.count("27")}} {% endif %}</div></li></a>
+  <a href="calendar/28"><li>28<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("28") != 0 %} {{list_of_days.count("28")}} {% endif %}</div></li></a>
+  <a href="calendar/29"><li>29<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("29") != 0 %} {{list_of_days.count("29")}} {% endif %}</div></li></a>
+  <a href="calendar/30"><li>30<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("30") != 0 %} {{list_of_days.count("30")}} {% endif %}</div></li></a>
+  <a href="calendar/31"><li>31<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("31") != 0 %} {{list_of_days.count("31")}} {% endif %}</div></li></a>
+  <li>&#160<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("") != 0 %} {{list_of_days.count("")}} {% endif %}</div></li></a>
+  <li>&#160<br><br><div class = "calendar_count">&#160&#160&#160&#160&#160&#160&#160&#160&#160 {% if list_of_days.count("") != 0 %} {{list_of_days.count("")}} {% endif %}</div></li></a>
   </ul>
 </div>
   {% endblock %}

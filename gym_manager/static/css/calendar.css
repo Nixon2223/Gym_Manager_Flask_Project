@@ -65,13 +65,19 @@ body {font-family: Verdana, sans-serif;}
     list-style-type: none;
     display: inline-block;
     width: 13.6%;
-    height: 70px;
+    height: 100px;
     text-align:justify;
     margin-bottom: 5px;
-    font-size:20px;
+    font-size:25px;
     color: #777;
 }
 
 .days li:hover {
-    background-color: yellow;
+    background-color: rgb(146, 239, 255);
   }
+
+.calendar_count {
+    text-align:center;
+    color: tomato;
+    font-size: 15px;
+}
