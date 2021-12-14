@@ -36,7 +36,8 @@
 {% for gym_class in gym_classes %}
 
 <section class = "gym_class">
-    <img class = "class_img" src = "static/img/Screenshot 2021-12-13 at 10.52.38.png">
+    <img class = "class_img" src = "static/img/Screenshot 2021-12-13 at 10.52.38.png" width = 100%>
+    <div class="class_container">
     <p>{{ gym_class.title }}</p>
     <p>{{ gym_class.coach.name }}</p>
     <p>{{ gym_class.date }}</p>
@@ -45,6 +46,7 @@
     <form action="/gym_classes/{{ gym_class.id }}/delete" method="POST">
         <input class = "delete" type="submit" value="X">
     </form>
+    </div>
 </section>
 {% endfor %}
 </div>

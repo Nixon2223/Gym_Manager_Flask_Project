@@ -6,6 +6,7 @@ h2 {
 
 .content {
     display: flex;
+    justify-content: space-evenly;
     gap: 10px;
     flex-wrap: wrap;
     position: relative;
