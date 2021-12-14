@@ -9,7 +9,7 @@
 }
 
 body{
-    background-color: aliceblue;
+    background-color: #c8d8e4;
 }
 
 h1 {
@@ -22,15 +22,15 @@ h1 {
     flex-wrap: wrap;
     position: relative;
     width:875px;
-    margin:100px 100px 100px 300px;
+    margin:100px 100px 100px 370px;
     padding:20px;
     border:1px solid #cccccc;
-    background:#ffffff; 
+    background:#f2f2f2; 
     height: auto;
 }
 
 .wrapper .sidebar{
-    background: #5680e9;
+    background: #2b6777;
     position: fixed;
     top: 0;
     left: 0;
@@ -47,9 +47,9 @@ h1 {
 
 .wrapper .sidebar .profile img{
     display: block;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border-radius: 30%;
     margin: 0 auto;
 }
 
@@ -60,13 +60,13 @@ h1 {
 
 .wrapper .sidebar .profile p{
     color: rgb(206, 240, 253);
-    font-size: 14px;
+    font-size: 10px;
 }
 
 .wrapper .sidebar ul li a{
     display: block;
     padding: 13px 30px;
-    border-bottom: 1px solid #10558d;
+    border-bottom: 1px solid #ffffff;
     color: rgb(241, 237, 237);
     font-size: 16px;
     position: relative;
@@ -83,7 +83,7 @@ h1 {
     color: #0c7db1;
 
     background:white;
-    border-right: 2px solid rgb(5, 68, 104);
+    border-right: 2px solid #ffffff;
 }
 
 .wrapper .sidebar ul li a:hover .icon,
