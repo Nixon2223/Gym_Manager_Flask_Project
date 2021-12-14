@@ -56,10 +56,15 @@ def edit_gym_class(id):
 # UPDATE
 @gym_classes_blueprint.route("/gym_classes/<id>", methods=["POST"])
 def update_gym_class(id):
-    name = request.form["name"]
+    title = request.form["title"]
+    sport = request.form["sport"]
     coach_id = request.form["coach_id"]
     coach = coach_repository.select(coach_id)
-    gym_class = GymClass(name, coach, id)
+    capacity = request.form["capacity"]
+    date = str(request.form["date"])
+    start_time = str(request.form["start_time"])
+    end_time = str(request.form["end_time"])
+    gym_class = GymClass(title, sport, capacity, coach, date, start_time, end_time, id)
     gym_class_repository.update(gym_class)
     return redirect("/gym_classes")
 
