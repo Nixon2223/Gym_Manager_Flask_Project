@@ -11,7 +11,7 @@
         <input type="text" id="name" name="name">
         <label for="members">Membership:</label>
         <select name="membership" id="memberships">
-        <option value = "deactivate">Deactivate</option>
+        <option value = "deactivated">Deactivated</option>
         <option value="standard">Standard</option>
         <option value="premium">Premium</option>
         <input type="Submit" value= "Create">
@@ -22,9 +22,10 @@
 
 {% for member in members %}
 
-<section class = "member">
+<section class = "member" id= "{{ member.membership }}">
     <img class = "member_avatar" src = "static/img/PinClipart.com_playing-video-games-black_1486972.png">
     <p>{{ member.name }}</p>
+    <p>{{ member.membership }}</p>
     <a href="/members/{{ member.id }}/edit">Edit</a>
     <form action="/members/{{ member.id }}/delete" method="POST">
         <input class = "delete" type="submit" value="X">
