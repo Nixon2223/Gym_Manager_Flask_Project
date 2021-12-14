@@ -5,7 +5,7 @@
 
 <div class = "content">
 
-<section class = "gym_class">
+<section class = "gym_class_calendar">
     <img class = "class_img" src = "static/img/Screenshot 2021-12-13 at 10.52.38.png">
     <p>{{ gym_class.title }}</p>
     <p>{{ gym_class.coach.name }}</p>
@@ -22,6 +22,9 @@
                 {% endfor %}
         <input type="Submit" value= "Book">
         </select>
+    {% for member in booked_in_names %}
+    <li></li><img src="/static/img/PinClipart.com_playing-video-games-black_1486972.png" class = "small_member_pic">{{member}}</li>
+    {% endfor %}
 </section>
 
 </div>

@@ -30,7 +30,10 @@ def calendar_get_day(day):
 def calendar_get_class(id):
     all_members = member_repository.select_all()
     gym_class = gym_class_repository.select(id)
+    booked_in_names = []
+    for member in gym_class_repository.select_members_of_gym_class(id):
+        booked_in_names.append(member.name)
     booked_in = []
     for member in gym_class_repository.select_members_of_gym_class(id):
         booked_in.append(member.id)
-    return render_template("calendar/class.html", gym_class = gym_class, booked_in = booked_in, members = all_members)
+    return render_template("calendar/class.html", gym_class = gym_class, booked_in = booked_in, members = all_members, booked_in_names = booked_in_names)

@@ -1,0 +1,20 @@
+.gym_class_calendar {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 7px;
+    margin: 10px;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px;
+    border-style: groove;
+    border-color: black;
+}
+
+.small_member_pic {
+    height: 20px;
+    width: 20px;
+}
