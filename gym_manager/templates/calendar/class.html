@@ -17,13 +17,18 @@
                 {% for member in members %}
                 {% if member.id not in booked_in %}
                 <option value="{{ member.id }}">{{ member.name }}</option>
-        </form>
+                
+        
                 {% endif %}
                 {% endfor %}
-        <input type="Submit" value= "Book">
+                <input type="Submit" value= "Book">
+        </form>
         </select>
-    {% for member in booked_in_names %}
-    <li></li><img src="/static/img/PinClipart.com_playing-video-games-black_1486972.png" class = "small_member_pic">{{member}}</li>
+    {% for member in booked_in_members %}
+    <stretch><li><img src="/static/img/PinClipart.com_playing-video-games-black_1486972.png" class = "small_member_pic">{{member.name}}    
+    <form action="/bookings/{{ member.id }}/{{ gym_class.id }}/delete" method="POST">
+        <input class = "delete" type="submit" value="X">
+    </form></li></stretch>
     {% endfor %}
 </section>
 

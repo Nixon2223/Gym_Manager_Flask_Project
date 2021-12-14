@@ -59,3 +59,10 @@ def update_booking(id):
 def delete_booking(id):
     booking_repository.delete(id)
     return redirect("/bookings")
+
+
+# DELETE WITH MEMBER AND CLASS ID
+@bookings_blueprint.route("/bookings/<member_id>/<gym_class_id>/delete", methods=["POST"])
+def delete_booking_delete_for_member_and_class_id(member_id, gym_class_id):
+    booking_repository.delete_for_member_and_class_id(member_id, gym_class_id)
+    return redirect(request.referrer)
