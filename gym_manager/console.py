@@ -52,23 +52,31 @@ import repositories.member_repository as member_repository
 
 # print(not_booked_in)
 
-members = []
-sql = "SELECT * FROM members WHERE membership = %s"
-values = ["standard"]
-results = run_sql(sql, values)
-for result in results:
-    member = Member(result["name"], result["membership"], result["id"])
-    members.append(member)
-print(len(members)) 
+# members = []
+# sql = "SELECT * FROM members WHERE membership = %s"
+# values = ["standard"]
+# results = run_sql(sql, values)
+# for result in results:
+#     member = Member(result["name"], result["membership"], result["id"])
+#     members.append(member)
+# print(len(members)) 
 
-members = []
-sql = "SELECT * FROM members WHERE membership = %s"
-values = ["deactivated"]
-results = run_sql(sql, values)
-for result in results:
-    member = Member(result["name"], result["membership"], result["id"])
-    members.append(member)
+# members = []
+# sql = "SELECT * FROM members WHERE membership = %s"
+# values = ["deactivated"]
+# results = run_sql(sql, values)
+# for result in results:
+#     member = Member(result["name"], result["membership"], result["id"])
+#     members.append(member)
 
-print(len(members)) 
+# print(len(members)) 
+
+
+# sql = "SELECT * FROM bookings WHERE id = %s"
+# values = [65]
+# result = run_sql(sql, values)[0]
+
+# print(result)
+
 
 pdb.set_trace()
