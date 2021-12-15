@@ -10,12 +10,13 @@
         <a href="/coaches/add"><div class ="add" ><img class = "add_img" src="static/img/append+circle+create+green+new+plus+icon-1320196710849480257_512.png"></div></a>
 
 {% for coach in coaches %}
+
 <section class = "coach">
+    <form action="/coaches/{{ coach.id }}/delete" method="POST">&#160&#160&#160&#160&#160&#160
+        <input class = "delete" type="submit" value="X">
     <img class = "coach_avatar" src = "static/img/PinClipart.com_playing-video-games-black_1486972.png">
     <p>{{ coach.name }}</p>
-    <a href="/coaches/{{ coach.id }}/edit">Edit</a>
-    <form action="/coaches/{{ coach.id }}/delete" method="POST">
-        <input class = "delete" type="submit" value="X">
+    <a href="/coaches/{{ coach.id }}/edit"><span style='font-size:20px;'>&#9998;</span></a>
     </form>
 </section>
 {% endfor %}

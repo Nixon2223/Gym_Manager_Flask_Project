@@ -13,9 +13,9 @@ def coaches():
 
 
 # NEW
-@coaches_blueprint.route("/coaches/new")
+@coaches_blueprint.route("/coaches/add")
 def new_coach():
-    return render_template("coaches/new.html")
+    return render_template("coaches/add.html")
 
 
 # CREATE

@@ -14,16 +14,17 @@ h2 {
 }
 
 .coach {
+    color: black;
+    background-color: rgb(245, 240, 92);
     height: 200px;
     width: 125px;
     display: flex;
-    justify-content: space-evenly;
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    gap: 7px;
+    gap: 10px;
     margin: 10px;
-    padding: 25px;
+    padding: 5px;
     border-radius: 10px;
     border: 1px;
     border-style: groove;
