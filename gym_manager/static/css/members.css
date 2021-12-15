@@ -59,6 +59,10 @@ h2 {
     width: 20px;
 }
 
+.delete:hover{
+    color: steelblue;
+}
+
 .add_img{
     width:110px;
     height: auto;
@@ -94,4 +98,8 @@ box-shadow: 0 5px 200px rgb(2, 138, 75);
 }
 #premium {
     background-color: rgb(94, 171, 122);
+}
+
+.edit:hover{
+    color: tomato;
 }
