@@ -1,30 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
-<h2>Dashboard</h2>
+
 <div class = "content_dashboard">
 
-<div class = "todays_classes"></div>
-    
-
-<TABLE>
-
-    {% for class in todays_classes %}
-
-        <td>{{ class.title }}</td>
-        <td>{{ class.capacity }}</td>
-        <td>{{ class.start_time }}</td>
-        <td><a href="/calendar/class/{{ class.id }}" class="active">View</td>
-
-    {% endfor %}
-</table>
-
-
+<div class = "stats_dashboard">
+<h2 class = "stats_heading">Stats</h2>
+<div class ="stat" id = "total_standard">
+    <h4>Current Standard Members</h4>
+    <p>{{standard_members}}</p>
 </div>
 
+<div class ="stat" id = "total_premium">
+    <h4>Current Premium Members</h4>
+    <p>{{premium_members}}</p>
+</div>
 
-
-<h3>Stats</h3>
-
+<div class ="stat" id = "total_deactivated">
+    <h4>Current Deactivated Members</h4>
+    <p>{{deactivated_members}}</p>
+</div>
+</div>
 
 
 </div>
