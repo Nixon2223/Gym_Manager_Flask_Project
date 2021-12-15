@@ -44,7 +44,8 @@ padding: 2px 16px;
 }
 
 .class_img {
-    width: 190px;
+    width: 250px;
+    height:200px;
     border-radius: 5px 5px 0 0;
 }
 
@@ -60,7 +61,7 @@ padding: 2px 16px;
 .add_class {
     background-color: rgb(49, 175, 145);
     height: 289px;
-    width: 190px;
+    width: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -77,3 +78,16 @@ padding: 2px 16px;
     color: rgba(255, 255, 255, 1);
     box-shadow: 0 5px 200px rgb(2, 138, 75);
     }
+
+.content_edit_class {
+    color: black;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    flex-wrap: wrap;
+    position: relative;
+    width:1000px;
+    margin:100px 100px 100px 370px;
+    padding:20px;
+    height: auto;
+}

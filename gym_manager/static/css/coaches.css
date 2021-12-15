@@ -16,7 +16,7 @@ h2 {
 .coach {
     color: black;
     background-color: rgb(245, 222, 92);
-    height: 200px;
+    height: 110px;
     width: 125px;
     display: flex;
     flex-direction: column;
@@ -46,3 +46,38 @@ h2 {
     height: 20px;
     width: 20px;
 }
+
+.add_coach {
+    background-color: rgb(49, 175, 145);
+    height: 110px;
+    width: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px;
+    border-style: groove;
+    border-color: black;
+}
+
+.add_coach:hover{
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 200px rgb(2, 138, 75);
+    }
+
+.content_edit_coaches {
+        color: black;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 10px;
+        flex-wrap: wrap;
+        position: relative;
+        width:1000px;
+        margin:100px 100px 100px 370px;
+        padding:20px;
+        height: auto;
+    }

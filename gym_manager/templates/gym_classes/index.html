@@ -9,7 +9,7 @@
 {% for gym_class in gym_classes %}
 
 <section class = "gym_class">
-    <img class = "class_img" src = "static/img/Screenshot 2021-12-14 at 23.39.18.png" width = 100%>
+    <img class = "class_img" src = "static/img/{{gym_class.sport}}.png" width = 100%>
     <div class="class_container">
     <p>{{ gym_class.title }}</p>
     <p>{{ gym_class.date }}</p><br>
