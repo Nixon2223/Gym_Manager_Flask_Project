@@ -81,6 +81,11 @@ h2 {
     border-color: black;
 }
 
+.add:hover{
+color: rgba(255, 255, 255, 1);
+box-shadow: 0 5px 200px rgb(2, 138, 75);
+}
+
 #deactivated {
     background-color: thistle;
 }
