@@ -31,6 +31,7 @@ padding: 2px 16px;
   }
 
 .classes_form{
+    font-size: 20px;
     margin:75px 100px 0px 370px;
     float: left;
 }
@@ -54,3 +55,19 @@ padding: 2px 16px;
 
 #capacity {width: 50px;}
 #coach {width:90px;}
+
+.add_class {
+    background-color: rgb(49, 175, 145);
+    height: 270px;
+    width: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px;
+    border-style: groove;
+    border-color: black;
+}

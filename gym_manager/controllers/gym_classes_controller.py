@@ -24,10 +24,10 @@ def show_gym_class(id):
 
 
 # NEW
-@gym_classes_blueprint.route("/gym_classes/new")
+@gym_classes_blueprint.route("/gym_classes/add")
 def new_gym_class():
     coaches = coach_repository.select_all()
-    return render_template("gym_classes/new.html", coaches=coaches)
+    return render_template("gym_classes/add.html", coaches=coaches)
 
 # CREATE
 @gym_classes_blueprint.route("/gym_classes", methods=["POST"])
