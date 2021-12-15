@@ -40,9 +40,17 @@ h2 {
         height: auto;
 }
 
+.add_member_form{
+    gap: 5px;
+    font-size: 20px;
+    height:30px;
+}
+
 .create_form{
+
+    font-size: 30px;
     margin:75px 100px 0px 370px;
-    float: left;
+
 }
 
 .delete {

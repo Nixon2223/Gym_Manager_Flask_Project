@@ -4,19 +4,12 @@
 <h2>Coaches</h2>
 
 
-<div class= "create_form">
-    <form action="/coaches" method="POST">
-    <div>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name">
-        <input type="Submit" value= "Create">
-    </div>
-    </form>
-</div>
+
 <div class = "content">
 
-{% for coach in coaches %}
+        <a href="/coaches/add"><div class ="add" ><img class = "add_img" src="static/img/append+circle+create+green+new+plus+icon-1320196710849480257_512.png"></div></a>
 
+{% for coach in coaches %}
 <section class = "coach">
     <img class = "coach_avatar" src = "static/img/PinClipart.com_playing-video-games-black_1486972.png">
     <p>{{ coach.name }}</p>
