@@ -1,20 +1,24 @@
 .gym_class_calendar {
+    color: black;
+    background-color: seashell;
     height: 500px;
-    width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items: center;
     gap: 7px;
-    margin: 10px;
     padding: 25px;
     border-radius: 10px;
     border: 1px;
     border-style: groove;
-    border-color: black;
+    width:1000px;
+    margin:45px 100px 100px 370px;
 }
 
 .small_member_pic {
     height: 20px;
     width: 20px;
+}
+
+.booking_header{
+    float: left;
 }

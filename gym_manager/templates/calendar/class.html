@@ -1,18 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>**********</h2>
+<h2>{{gym_class.title}}</h2>
 
-<div class = "content">
 
 <section class = "gym_class_calendar">
-    <img class = "class_img" src = "/static/img/Screenshot 2021-12-13 at 10.52.38.png">
+    <header class= "booking_header">
     <p>{{ gym_class.title }}</p>
     <p>{{ gym_class.coach.name }}</p>
     <p>{{ gym_class.date }}</p>
     <p>{{ gym_class.start_time }} - {{ gym_class.end_time }}</p>
     <p>capacity: {{num_booked_in}} /{{gym_class.capacity}}</p>
-
+    </header>
     {% if gym_class.capacity > num_booked_in %}  
     <form action="/bookings/{{ gym_class.id }}" method="POST">
         <form action="/bookings" method="POST">
