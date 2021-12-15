@@ -49,6 +49,7 @@ padding: 2px 16px;
 }
 
 .edit {
+    padding-bottom: 6px;
     float: right;
     color: rgb(254, 234, 234);
 }
@@ -58,7 +59,7 @@ padding: 2px 16px;
 
 .add_class {
     background-color: rgb(49, 175, 145);
-    height: 270px;
+    height: 289px;
     width: 190px;
     display: flex;
     flex-direction: column;
