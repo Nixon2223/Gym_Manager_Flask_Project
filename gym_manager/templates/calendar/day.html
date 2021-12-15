@@ -1,20 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2>Classes for *****</h2>
+<h2>Classes for 21/12/{{day}}</h2>
 
 <div class = "content">
 
 {% for gym_class in gym_classes %}
 
 <section class = "gym_class">
-    <img class = "class_img" src = "/static/img/Screenshot 2021-12-13 at 10.52.38.png">
+    <img class = "class_img" src = "/static/img/Screenshot 2021-12-14 at 23.39.18.png" width = 100%>
+    <div class="class_container">
     <p>{{ gym_class.title }}</p>
-    <p>{{ gym_class.coach.name }}</p>
-    <p>{{ gym_class.date }}</p>
-    <p>{{ gym_class.start_time }} - {{ gym_class.end_time }}</p>
-    <a href="/calendar/class/{{ gym_class.id }}" class="active"><span class="item">View</span>
-
+    <p>{{gym_class.start_time }} - {{gym_class.end_time }}</p>
+    <a href="/calendar/class/{{ gym_class.id }}" class="view"><span>View</span>
+    </div>
 </section>
 {% endfor %}
 

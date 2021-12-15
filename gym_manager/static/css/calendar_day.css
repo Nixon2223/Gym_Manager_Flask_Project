@@ -1,0 +1,11 @@
+.view {
+    text-decoration: underline;
+    border-color: rgb(255, 255, 255);
+    color: white;
+    font-size: 30px;
+    float: right;
+}
+
+.view:hover {
+    color: tomato;
+}
