@@ -30,7 +30,7 @@
         </select>
     {% endif %}
     {% if gym_class.capacity <= num_booked_in %} 
-    <p>CLASS FULL</p>
+    <p class = "full">CLASS FULL!</p>
 
     {% endif %}
 
@@ -38,7 +38,7 @@
 
 <div class = "bookings">
     {% for member in booked_in_members %}
-    <div class = "member_booking">
+    <div class = "member_booking" id= "{{ member.membership }}">
     <stretch><li><img src="/static/img/PinClipart.com_playing-video-games-black_1486972.png" class = "small_member_pic">{{member.name}}    
     <form action="/bookings/{{ member.id }}/{{ gym_class.id }}/delete" method="POST">
     <input class = "delete" type="submit" value="X">

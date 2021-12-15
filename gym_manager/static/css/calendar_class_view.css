@@ -15,8 +15,8 @@
 }
 
 .small_member_pic {
-    height: 20px;
-    width: 20px;
+    height: 40px;
+    width: 40px;
 }
 
 .booking_header{
@@ -25,7 +25,8 @@
 }
  
 .member_booking {
-    height: 200px;
+    color: blanchedalmond;
+    height: 80px;
     width: 125px;
     display: flex;
     flex-direction: column;
@@ -43,4 +44,20 @@
 .bookings {
     display: flex;
     flex-wrap: wrap;
+}
+
+#deactivated {
+    background-color: thistle;
+}
+#standard {
+    background-color: rgb(61, 21, 61);
+}
+#premium {
+    background-color: rgb(94, 171, 122);
+}
+
+.full {
+    color: tomato;
+    font-size: 25px;
+    font-style: oblique;
 }
