@@ -1,4 +1,5 @@
 import pdb
+from db.run_sql import run_sql
 from models.booking import Booking
 import repositories.booking_repository as booking_repository
 from models.gymclass import GymClass
@@ -35,20 +36,39 @@ import repositories.member_repository as member_repository
 # print(gym_class_repository.select(class1.id).__dict__)
 # print(booking_repository.select(booking1.id).__dict__)
 
-print(gym_class_repository.select_members_of_gym_class(3))
-print(member_repository.select_all())
+# print(gym_class_repository.select_members_of_gym_class(3))
+# print(member_repository.select_all())
 
-booked_in = []
-for member in gym_class_repository.select_members_of_gym_class(3):
-    booked_in.append(member.id)
-print(booked_in)
-members = member_repository.select_all()
+# booked_in = []
+# for member in gym_class_repository.select_members_of_gym_class(3):
+#     booked_in.append(member.id)
+# print(booked_in)
+# members = member_repository.select_all()
 
-not_booked_in = []
-for member in members:
-    if member.id not in booked_in:
-        not_booked_in.append(member.id)
+# not_booked_in = []
+# for member in members:
+#     if member.id not in booked_in:
+#         not_booked_in.append(member.id)
 
-print(not_booked_in)
+# print(not_booked_in)
+
+members = []
+sql = "SELECT * FROM members WHERE membership = %s"
+values = ["standard"]
+results = run_sql(sql, values)
+for result in results:
+    member = Member(result["name"], result["membership"], result["id"])
+    members.append(member)
+print(len(members)) 
+
+members = []
+sql = "SELECT * FROM members WHERE membership = %s"
+values = ["deactivated"]
+results = run_sql(sql, values)
+for result in results:
+    member = Member(result["name"], result["membership"], result["id"])
+    members.append(member)
+
+print(len(members)) 
 
 pdb.set_trace()
