@@ -26,6 +26,26 @@ def select(id):
     member = Member(result["name"], result["membership"], result["id"])
     return member
 
+def select_premium():
+    sql = "SELECT * FROM members WHERE membership = %s"
+    values = ["premium"]
+    result = run_sql(sql, values)[0]
+    member = Member(result["name"], result["membership"], result["id"])
+    return member
+
+def select_standard():
+    sql = "SELECT * FROM members WHERE membership = %s"
+    values = ["standard"]
+    result = run_sql(sql, values)[0]
+    member = Member(result["name"], result["membership"], result["id"])
+    return member   
+
+def select_deactivated():
+    sql = "SELECT * FROM members WHERE membership = %s"
+    values = ["deactivated"]
+    result = run_sql(sql, values)[0]
+    member = Member(result["name"], result["membership"], result["id"])
+    return member
 
 def delete_all():
     sql = "DELETE FROM members"
