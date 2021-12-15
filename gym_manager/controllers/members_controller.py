@@ -13,9 +13,9 @@ def members():
 
 
 # NEW
-@members_blueprint.route("/members/new")
+@members_blueprint.route("/members/add")
 def new_member():
-    return render_template("members/new.html")
+    return render_template("members/add.html")
 
 
 # CREATE

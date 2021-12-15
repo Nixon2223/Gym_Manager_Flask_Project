@@ -3,7 +3,7 @@ h2 {
     padding-top: 30px;
     margin-left: 60px;
     letter-spacing: 3px;
-    font: small-caps bold 50px/1 sans-serif;
+    font: small-caps bold 63px/1 sans-serif;
     text-align:center;
 }
 
@@ -14,7 +14,7 @@ h2 {
     flex-wrap: wrap;
     position: relative;
     width:1000px;
-    margin:100px 100px 100px 370px;
+    margin:30px 100px 100px 370px;
     padding:20px;
     height: auto;
 }
@@ -49,6 +49,28 @@ h2 {
     color: red;
     height: 20px;
     width: 20px;
+}
+
+.add_img{
+    width:110px;
+    height: auto;
+}
+
+.add {
+    background-color: rgb(49, 175, 145);
+    height: 200px;
+    width: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px;
+    border-style: groove;
+    border-color: black;
 }
 
 #deactivated {
