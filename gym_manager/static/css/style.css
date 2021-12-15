@@ -9,10 +9,12 @@
 }
 
 body{
+    background-image: url("/static/img/pngegg (2).png");
     background-color: #c8d8e4;
 }
 
 h1 {
+    letter-spacing: 3px;
     text-align: center;
 }
 
@@ -21,11 +23,9 @@ h1 {
     gap: 10px;
     flex-wrap: wrap;
     position: relative;
-    width:875px;
+    width:1000px;
     margin:100px 100px 100px 370px;
     padding:20px;
-    border:1px solid #cccccc;
-    background:#f2f2f2; 
     height: auto;
 }
 
