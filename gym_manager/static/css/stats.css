@@ -1,0 +1,24 @@
+.stat{
+    text-align: center;
+    height: 250px;
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; 
+}
+
+.stat > p {
+    padding:50px;
+    font-size: 100px;
+    text-align: center;
+}
+
+#total_standard{
+    background-color: rgb(61, 21, 61);
+}
+#total_premium{
+    background-color: rgb(94, 171, 122);
+}
+#total_deactivated{
+    background-color: thistle;
+}
