@@ -6,7 +6,7 @@
 <form action="/members/{{ member.id }}" method="POST">
     <div>
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" value="{{ member.name }}">
+        <input type="text" id="name" name="name" value="{{ member.name }}" autocomplete="off">
         <select name="membership" id="membership">
         <option selected="selected">{{member.membership}}</option>
         <option value = "deactivated">Deactivated</option>

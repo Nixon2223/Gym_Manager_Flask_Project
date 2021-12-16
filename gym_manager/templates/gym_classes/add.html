@@ -7,9 +7,9 @@
     <form action="/gym_classes" method="POST">
     <div>
         <label for="tilte">Title:</label>
-        <input type="text" id="title" name="title" class ="add_member_form" required="required">
+        <input type="text" id="title" name="title" class ="add_member_form" required="required" autocomplete="off">
         <label for="sport">Sport:</label>
-        <input type="text" id="sport" name="sport" class ="add_member_form" required="required">
+        <input type="text" id="sport" name="sport" class ="add_member_form" required="required" autocomplete="off">
         <label for="coach">Coach:</label>
         <select name="coach_id" id="coach" class ="add_member_form" required="required">
             {% for coach in coaches %}

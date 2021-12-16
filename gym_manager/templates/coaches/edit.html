@@ -6,7 +6,7 @@
 <form action="/coaches/{{ coach.id }}" method="POST">
     <div>
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" value="{{ coach.name }}">
+        <input type="text" id="name" name="name" value="{{ coach.name }}" autocomplete="off">
         <input type="submit">
     </div>
 </form>

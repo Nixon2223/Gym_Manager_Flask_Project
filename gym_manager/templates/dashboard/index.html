@@ -3,6 +3,28 @@
 
 <div class = "content_dashboard">
 
+<div class = "classes_dashboard">
+<h2 class = "classes_heading">Classes for <br>2021/12/17</h2>
+
+{% for gym_class in gym_classes %}
+
+<section class = "gym_class">
+    <img class = "class_img" src = "/static/img/{{gym_class.sport}}.png" width = 100%>
+    <div class="class_container">
+    <p>{{ gym_class.title }}</p>
+    <p>{{gym_class.start_time }} - {{gym_class.end_time }}</p>
+    <a href="/calendar/class/{{ gym_class.id }}" class="view">View</a>
+    </div>
+</section>
+{% endfor %}
+
+</div>
+
+
+
+
+
+
 <div class = "stats_dashboard">
 <h2 class = "stats_heading">Stats</h2>
 <div class ="stat" id = "total_standard">
